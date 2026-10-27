@@ -31,9 +31,9 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 ## Repository Contents
 
-- `SRS.pdf` – Software Requirements Specification
-- `Airline_Customer_Satisfaction_Analysis_Phase1.ipynb` – Phase 1 analysis notebook
-- `data/` – Dataset folder
+- Airline_Customer_Satisfaction_Analysis_SRS.pdf – Software Requirements Specification
+- Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 1 analysis notebook
+- data/ – Dataset folder
 
 ## How to Run the Notebook
 
