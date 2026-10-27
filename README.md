@@ -20,6 +20,8 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 **Rows and Columns:** Dataset contains 64,740 rows and 19 columns before data cleaning.
 
+ Note: The dataset file is too large to upload directly to this GitHub repository. Therefore, it has not been included in the repository   Please access the original dataset using the link above and download it from Mendeley Data before running the notebook.
+
 ## Tools and Technologies
 
 - Python
@@ -29,30 +31,11 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Seaborn
 - Plotly
 
-## Repository Structure
-
-Airline-Customer-Satisfaction-Analysis/
-│
-├── data/
-│   └── airline_reviews.csv
-│
-├── SRS.pdf
-├── Phase1_Airline_Customer_Satisfaction_Analysis.ipynb
-└── README.md
-
 ## Repository Contents
 
 - Airline_Customer_Satisfaction_Analysis_SRS.pdf – Software Requirements Specification
 - Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 1 analysis notebook
 - data/ – Dataset folder
-
-## Dataset Source
-
-- The dataset used in this project was obtained from Mendeley Data.
-
-- Dataset Link: https://data.mendeley.com/datasets/vgjk58vf8h/1
-
-- Note: The dataset file is too large to upload directly to this GitHub repository. Therefore, it has not been included in the repository   Please access the original dataset using the link above and download it from Mendeley Data before running the notebook.
 
 ## How to Run the Notebook
 
@@ -67,3 +50,5 @@ Airline-Customer-Satisfaction-Analysis/
 - Comparison of seven service categories
 - Identification of the three lowest-rated service areas
 - Visualizations and key findings related to airline service quality
+
+
