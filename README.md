@@ -47,11 +47,11 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 ## Phase 1 – Project Planning and SRS
 
-### Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.         Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
+- Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.         Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
 
 ## Phase 2 – Data Cleaning and Preprocessing
 
-### Imported and inspected the dataset, identified and handled missing values, removed duplicate records, standardized categorical            values,converted date columns into datetime format, and validated rating ranges. Created two new features: satisfaction_level and         average_service_rating, to support further analysis.
+- Imported and inspected the dataset, identified and handled missing values, removed duplicate records, standardized categorical            values,converted date columns into datetime format, and validated rating ranges. Created two new features: satisfaction_level and         average_service_rating, to support further analysis.
 
 ## Expected Outcomes
 - Passenger satisfaction analysis
