@@ -123,22 +123,18 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 - Examined the value counts of each categorical column to understand the category distribution and identify inconsistent labels.
   
-##### 2. Checking review_header and airline_name
-   
-- Checked both columns and confirmed that they had no missing values.
-  
-##### 3. Standardising the trip_verified Column
+##### 2. Standardising the trip_verified Column
    
 - Identified inconsistent labels in the trip_verified column and standardised them into three categories: Verified, Not Verified, and
   Unknown.
   
 - This helps maintain uniformity and avoids treating similar labels as separate categories.
   
-##### 4. Removing Unwanted Spaces
+##### 3. Removing Unwanted Spaces
    
 - Removed leading and trailing spaces from all categorical columns to maintain consistent category values and avoid unwanted variations.
   
-##### 5. Rechecking Categorical Value Counts
+##### 4. Rechecking Categorical Value Counts
    
 - Examined the value counts again after standardisation and space removal to verify consistency in the categorical data.
 
