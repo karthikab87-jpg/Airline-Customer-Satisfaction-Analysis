@@ -20,8 +20,6 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 **Rows and Columns:** Dataset contains 64,740 rows and 19 columns before data cleaning.
 
- Note: The dataset file is too large to upload directly to this GitHub repository. Therefore, it has not been included in the repository   Please access the original dataset using the link above and download it from Mendeley Data before running the notebook.
-
 ## Tools and Technologies
 
 - Python
@@ -35,7 +33,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 - Airline_Customer_Satisfaction_Analysis_SRS.pdf – Software Requirements Specification
 - Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 1 analysis notebook
-- Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 2 analysis notebook
+- Airline_Customer_Satisfaction_Analysis_Phase2.ipynb – Phase 2 analysis notebook
 - data/ – Dataset folder
 
 ## How to Run the Notebook
