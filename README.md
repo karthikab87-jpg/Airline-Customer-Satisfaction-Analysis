@@ -47,7 +47,10 @@ This project analyzes airline passenger reviews and ratings to understand custom
 ## Phase 1 – Project Planning and SRS
 
 - Identified and selected a suitable Skytrax airline review dataset based on the project requirements and given conditions.
-- Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.      - Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
+  
+- Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
+  
+- Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
 
 ## Phase 2 – Data Cleaning and Preprocessing
 
@@ -109,13 +112,13 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 - Removed the aircraft column because it contained a high proportion of missing values (approximately 56.7%) and was not required for the   project's analysis objectives.
   
-#### 4. Handling Missing Values in Remaining Categorical Columns
+##### 4. Handling Missing Values in Remaining Categorical Columns
    
 - Replaced missing values in the remaining categorical columns with Unknown to preserve records without making assumptions about the        missing information.
   
 - This also helps distinguish unavailable information from existing categories.
   
-#### 5. Handling Missing Values in Date Columns
+##### 5. Handling Missing Values in Date Columns
 
 - Checked missing values in the date_flown column.
   
