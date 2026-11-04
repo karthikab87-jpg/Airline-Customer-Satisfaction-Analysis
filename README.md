@@ -47,7 +47,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 ## Phase 1 – Project Planning and SRS
 
 - Identified and selected a suitable Skytrax airline review dataset based on the project requirements and given conditions.
-- Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.       - Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
+- Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.      - Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
 
 ## Phase 2 – Data Cleaning and Preprocessing
 
@@ -114,6 +114,14 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Replaced missing values in the remaining categorical columns with Unknown to preserve records without making assumptions about the        missing information.
   
 - This also helps distinguish unavailable information from existing categories.
+  
+#### 5. Handling Missing Values in Date Columns
+
+- Checked missing values in the date_flown column.
+  
+- Retained missing values without replacement because the actual travel month and year were unavailable.
+  
+- Avoided filling missing dates with assumed values to maintain the accuracy of date-based analysis.
 
 #### 9.Standardising Categorical Columns
 
@@ -132,7 +140,11 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 - Removed leading and trailing spaces from all categorical columns to maintain consistent category values and avoid unwanted variations.
   
-##### 4. Rechecking Categorical Value Counts
+##### 4. Standardising route column values
+
+- Identified unwanted commas in a few route values and removed them to maintain consistent formatting across the route column.
+
+##### 5. Rechecking Categorical Value Counts
    
 - Examined the value counts again after standardisation and space removal to verify consistency in the categorical data.
 
