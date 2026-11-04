@@ -35,6 +35,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 - Airline_Customer_Satisfaction_Analysis_SRS.pdf – Software Requirements Specification
 - Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 1 analysis notebook
+- Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 2 analysis notebook
 - data/ – Dataset folder
 
 ## How to Run the Notebook
@@ -62,19 +63,19 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 - Checked missing values in each column to identify incomplete data and decide how to handle them.
   
-3. Checking and Removing Duplicate Records
+### 3. Checking and Removing Duplicate Records
    
 - Identified 64 duplicate records and removed them while keeping the first occurrence to avoid repeated entries affecting the analysis.
   
 - Checked again to confirm that no duplicate records remained.
  
-4. Converting Date Columns
+### 4. Converting Date Columns
    
 - Converted review_date and date_flown from text into datetime format to make them suitable for date-based operations and analysis.
   
 - Assigned the first day of the month as a placeholder for date_flown because the exact travel date was unavailable.
-
- 5.Handling Missing Values in Numerical Rating Columns
+  
+### 5.Handling Missing Values in Numerical Rating Columns
  
 - Identified missing values in the over_all_rating column and the seven service-rating columns.
   
@@ -90,59 +91,59 @@ This project analyzes airline passenger reviews and ratings to understand custom
   
 - This helps keep the service quality analysis focused on categories with more available responses.
   
-7. Validating Rating Values
+### 7. Validating Rating Values
    
 - Checked whether overall ratings were within the 1–10 range and service ratings were within the 1–5 range to identify invalid values.
   
-8.Handling Missing Values in Categorical Columns
+### 8.Handling Missing Values in Categorical Columns
 
-1. Checking Missing Values
+#### 1. Checking Missing Values
    
 - Checked missing values in the categorical columns to understand the amount of missing data and decide suitable handling methods.
   
-2. Handling Missing Values in seat_type
+#### 2. Handling Missing Values in seat_type
    
 - Replaced missing values in the seat_type column with the mode (most frequently occurring category) because only a small number of
   values were missing.    
   
 - This helped retain the records and maintain consistency in the categorical data.
   
-3. Removing the aircraft Column
+#### 3. Removing the aircraft Column
    
 - Removed the aircraft column because it contained a high proportion of missing values (approximately 56.7%) and was not required for the   project's analysis objectives.
   
-4. Handling Missing Values in Remaining Categorical Columns
+#### 4. Handling Missing Values in Remaining Categorical Columns
    
 - Replaced missing values in the remaining categorical columns with Unknown to preserve records without making assumptions about the        missing information.
   
 - This also helps distinguish unavailable information from existing categories.
 
-9.Standardising Categorical Columns
+### 9.Standardising Categorical Columns
 
-1. Checking Categorical Value Counts
+#### 1. Checking Categorical Value Counts
    
 - Examined the value counts of each categorical column to understand the category distribution and identify inconsistent labels.
   
-2. Checking review_header and airline_name
+#### 2. Checking review_header and airline_name
    
 - Checked both columns and confirmed that they had no missing values.
   
-3. Standardising the trip_verified Column
+#### 3. Standardising the trip_verified Column
    
 - Identified inconsistent labels in the trip_verified column and standardised them into three categories: Verified, Not Verified, and
   Unknown.
   
 - This helps maintain uniformity and avoids treating similar labels as separate categories.
   
-4. Removing Unwanted Spaces
+#### 4. Removing Unwanted Spaces
    
 - Removed leading and trailing spaces from all categorical columns to maintain consistent category values and avoid unwanted variations.
   
-5. Rechecking Categorical Value Counts
+#### 5. Rechecking Categorical Value Counts
    
 - Examined the value counts again after standardisation and space removal to verify consistency in the categorical data.
 
-10.Dataset Overview and Exploration
+### 10.Dataset Overview and Exploration
 
 - Examined the dataset using head(), columns, shape, info() and describe() to understand its structure, column names, dimensions, data
   types, non-null values and statistical summary.
@@ -150,12 +151,12 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Checked the dataset shape after removing unnecessary columns to verify the updated number of rows and columns before proceeding with
    further analysis.
 
-11.Feature Engineering
+### 11.Feature Engineering
 
 - Created two new columns from the existing dataset to support further analysis and provide better insights into passenger satisfaction
    and service quality.
 
-1. Creating the satisfaction_level Column
+#### 1. Creating the satisfaction_level Column
    
 - Created a new column named satisfaction_level using the over_all_rating column.
   
@@ -165,7 +166,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
   
 - This feature helps analyse passenger satisfaction levels and calculate the percentage of ratings in each category.
   
-2. Creating the average_service_rating Column
+#### 2. Creating the average_service_rating Column
    
 - Created a new column named average_service_rating by calculating the row-wise average of the six service-rating columns.
   
