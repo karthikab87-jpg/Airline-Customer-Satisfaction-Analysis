@@ -102,17 +102,17 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 - Checked missing values in the categorical columns to understand the amount of missing data and decide suitable handling methods.
   
-##### 2. Handling Missing Values in seat_type
+##### 2. Mode Imputation
+
+- Replaced missing values in the seat_type column with the mode (most frequently occurring category) because only 37 values were missing.
+  
+- This helped retain records while maintaining consistency in the categorical data.
    
-- Used mode imputation to replace the missing values in the seat_type column because only a small number of values were missing.
-  
-- The mode represents the most frequently occurring category and helps maintain consistency while preserving the records.
-  
 ##### 3. Removing the aircraft Column
    
 - Removed the aircraft column because it contained a high proportion of missing values (approximately 56.7%) and was not required for the   project's analysis objectives.
   
-##### 4. Handling Missing Values in Remaining Categorical Columns
+##### 4. Handling Missing Values in Remaining Categorical Columns Using Unknown
    
 - Replaced missing values in the remaining categorical columns with Unknown to preserve records without making assumptions about the        missing information.
   
