@@ -54,11 +54,11 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 - Imported and inspected the dataset, identified and handled missing values, removed duplicate records, standardized categorical            values,converted date columns into datetime format, and validated rating ranges. Created two new features: satisfaction_level and         average_service_rating, to support further analysis.
 
-1. Creating a Copy of the Dataset
+### 1. Creating a Copy of the Dataset
      
 - Created a copy of the original dataset to preserve the raw data. This allows cleaning operations to be performed without changing the     original dataset.
   
-2. Checking Missing Values
+### 2. Checking Missing Values
    
 - Checked missing values in each column to identify incomplete data and decide how to handle them.
   
