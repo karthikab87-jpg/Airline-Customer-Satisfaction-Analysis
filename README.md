@@ -110,7 +110,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 ##### 3. Removing the aircraft Column
    
-- Removed the aircraft column because it contained a high proportion of missing values (approximately 56.7%) and was not required for the   project's analysis objectives.
+- Removed the aircraft column because it contained a high proportion of missing values (approximately 56.7%) and was not required for the   project's analysis objectives.I decided to drop this column rather than use incomplete information.
   
 ##### 4. Handling Missing Values in Remaining Categorical Columns Using Unknown
    
