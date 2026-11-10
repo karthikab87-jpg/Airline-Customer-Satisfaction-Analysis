@@ -47,9 +47,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 ## Phase 1 – Project Planning and SRS
 
 - Identified and selected a suitable Skytrax airline review dataset based on the project requirements and given conditions.
-  
 - Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
-  
 - Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
 
 ## Phase 2 – Data Cleaning and Preprocessing
@@ -67,29 +65,21 @@ This project analyzes airline passenger reviews and ratings to understand custom
 #### 3. Checking and Removing Duplicate Records
    
 - Identified 64 duplicate records and removed them while keeping the first occurrence to avoid repeated entries affecting the analysis.
-  
 - Checked again to confirm that no duplicate records remained.
  
 #### 4. Converting Date Columns
    
 - Converted review_date and date_flown from text into datetime format to make them suitable for date-based operations and analysis.
-  
 - Assigned the first day of the month as a placeholder for date_flown because the exact travel date was unavailable.
   
 #### 5.Handling Missing Values in Numerical Rating Columns
  
 - Identified missing values in the over_all_rating column and the seven service-rating columns.
-  
 - Retained the missing values without replacement because they represent unavailable passenger feedback.
-  
 - Avoided replacing missing ratings with assumed values, as this could affect the accuracy of the analysis.
-  
 - Pandas automatically excludes missing values from statistical calculations where applicable.
-  
 - The available ratings will be used for further analysis, and the number of valid responses will be considered while interpreting the      results.
-  
 - The wifi__connectivity column was removed because it contained a high proportion of missing values (approximately 63.5%).
-  
 - This helps keep the service quality analysis focused on categories with more available responses.
   
 #### 7. Validating Rating Values
@@ -105,7 +95,6 @@ This project analyzes airline passenger reviews and ratings to understand custom
 ##### 2. Mode Imputation
 
 - Replaced missing values in the seat_type column with the mode (most frequently occurring category) because only 37 values were missing.
-  
 - This helped retain records while maintaining consistency in the categorical data.
    
 ##### 3. Removing the aircraft Column
@@ -115,15 +104,12 @@ This project analyzes airline passenger reviews and ratings to understand custom
 ##### 4. Handling Missing Values in Remaining Categorical Columns Using Unknown
    
 - Replaced missing values in the remaining categorical columns with Unknown to preserve records without making assumptions about the        missing information.
-  
 - This also helps distinguish unavailable information from existing categories.
   
 ##### 5. Handling Missing Values in Date Columns
 
 - Checked missing values in the date_flown column.
-  
 - Retained missing values without replacement because the actual travel month and year were unavailable.
-  
 - Avoided filling missing dates with assumed values to maintain the accuracy of date-based analysis.
 
 #### 9.Standardising Categorical Columns
@@ -136,7 +122,6 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 - Identified inconsistent labels in the trip_verified column and standardised them into three categories: Verified, Not Verified, and
   Unknown.
-  
 - This helps maintain uniformity and avoids treating similar labels as separate categories.
   
 ##### 3. Removing Unwanted Spaces
@@ -155,33 +140,26 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 - Examined the dataset using head(), columns, shape, info() and describe() to understand its structure, column names, dimensions, data
   types, non-null values and statistical summary.
-  
 - Checked the dataset shape after removing unnecessary columns to verify the updated number of rows and columns before proceeding with
    further analysis.
 
 #### 11. Feature Engineering
 
 - Created two new columns from the existing dataset to support further analysis and provide better insights into passenger satisfaction
-   and service quality.
+  and service quality.
 
 ##### 1. Creating the satisfaction_level Column
    
 - Created a new column named satisfaction_level using the over_all_rating column.
-  
 - Categorised passenger ratings into three groups: Poor, Medium and Positive.
-  
 - Assigned Unknown to records with missing overall ratings.
-  
 - This feature helps analyse passenger satisfaction levels and calculate the percentage of ratings in each category.
   
 ##### 2. Creating the average_service_rating Column
    
 - Created a new column named average_service_rating by calculating the row-wise average of the six service-rating columns.
-  
 - This feature provides an overall measure of passenger experience across different service aspects.
-  
 - Missing ratings were excluded from the average calculation.
-  
 - Rows with all six service ratings missing retained a missing value.
   
 ### Final Dataset Overview
@@ -199,6 +177,8 @@ After completing data cleaning and preprocessing, Exploratory Data Analysis (EDA
 - Used describe() to examine the statistical summary of numerical columns and describe(include='all') to understand both numerical and
   categorical columns.
   
+#### Univariate,Bivariate and Multivariate Analysis
+
 1. Overall Rating and Satisfaction Level Distribution
 
 - Analysed the frequency distribution of over_all_rating to understand passenger rating patterns.
@@ -215,10 +195,62 @@ After completing data cleaning and preprocessing, Exploratory Data Analysis (EDA
 - Cabin staff service received the highest average rating (3.07), indicating comparatively better passenger feedback.
 - Ground service received the lowest average rating (2.58), followed by value for money (2.61).
 - Food and beverages (2.80), inflight entertainment (2.83), and seat comfort (2.84) received relatively similar average ratings.
-- Compared the average ratings across service categories to identify areas with comparatively lower passenger ratings.  
+- Compared the average ratings across all six service categories and sorted them in ascending order to identify the three lowest-rated
+  service categories.
 - The analysis shows that cabin staff service received the highest average rating, while ground service and value for money received the
   lowest.These results highlight areas where airlines can focus on improving passenger experience and service quality.
   
+3. Trip Verification Analysis
+   
+- This analysis examines the distribution of verified and non-verified passenger reviews to understand how many reviews are associated
+  with confirmed travel experiences.
+
+4. Recommendation Status Analysis
+   
+- Calculated the percentage distribution of Yes and No recommendations.
+- Compared the average overall ratings across both recommendation categories.
+- Passengers who did not recommend the airline accounted for 61.70%, with an average rating of 1.87.
+- Passengers who recommended the airline accounted for 38.30%, with an average rating of 8.34.
+- Identified a strong relationship between passengers' overall ratings and their recommendation decisions.
+
+5. Airline-Wise Overall Rating Analysis
+   
+- Initially identified airlines with very few reviews, as small sample sizes could make average ratings less representative (e.g.,an
+  airline with only 2 reviews had a high rating).
+- Used descriptive statistics to examine the distribution of review counts and selected 100 reviews as the minimum threshold for
+  comparison.
+- Grouped the data by airline and calculated the review count and average overall rating.
+- Filtered airlines with at least 100 reviews and identified the top 5 and bottom 5 airlines based on average ratings.
+- Hainan Airlines recorded the highest average rating (8.49), while Silver Airways recorded the lowest (1.82).
+
+6. Traveller Type-wise Overall Rating Analysis
+   
+- Grouped the reviews by traveller type.
+- Calculated the number of available overall ratings and the average overall rating for each traveller category.
+- Solo leisure travellers had the highest number of reviews (23,271) and the highest average overall rating (4.76).
+- Family leisure travellers recorded the lowest average overall rating (3.82).
+
+7. Seat Type-Wise Analysis
+
+- Business Class passengers gave the highest average overall ratings, while Economy Class passengers gave the lowest average ratings.
+
+Visualization
+
+1. Overall Rating Distribution (Matplotlib Histogram)
+
+- Used a histogram to visualize the frequency distribution of passenger overall ratings and understand how the ratings are spread across
+  the 1–10 scale.
+- The histogram shows a very high frequency of low ratings, particularly at rating 1.
+- A considerable number of passengers also gave higher ratings (7–10), while comparatively fewer ratings fall in the middle range.
+- This indicates that passenger opinions are divided, with many passengers giving either low or high ratings.
+
+2. Service-wise Average Rating Comparison(Horizontal Bar Chart)
+
+- The chart shows that cabin staff service received the highest average rating, followed by seat comfort and inflight entertainment.
+- Ground service received the lowest average rating, followed by value for money.
+- This indicates that passengers rated cabin staff service relatively better, while ground service and value for money are the key areas
+  that need improvement.
+
 ## Expected Outcomes
 - Passenger satisfaction analysis
 - Comparison of seven service categories
