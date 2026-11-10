@@ -189,6 +189,35 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Verified the final dataset after completing data cleaning, preprocessing and feature engineering.
 - The final dataset contains 64,676 rows and 19 columns.
 - The cleaned and structured dataset is now ready for Exploratory Data Analysis (EDA).
+
+## Exploratory Data Analysis (EDA)
+
+After completing data cleaning and preprocessing, Exploratory Data Analysis (EDA) was performed to understand the dataset, examine rating distributions, and explore passenger satisfaction patterns.
+
+#### Descriptive Statistics
+   
+- Used describe() to examine the statistical summary of numerical columns and describe(include='all') to understand both numerical and
+  categorical columns.
+  
+1. Overall Rating and Satisfaction Level Distribution
+
+- Analysed the frequency distribution of over_all_rating to understand passenger rating patterns.
+- Examined the satisfaction_level column to understand the distribution of Poor, Medium, and High satisfaction categories.
+- Calculated the percentage of passengers in each satisfaction category.
+- Excluded the Unknown category from percentage calculations because it does not represent a known satisfaction level.
+- Poor satisfaction accounts for the highest percentage (47.65%), followed by High (41.65%) and Medium (10.70%).
+- The analysis shows that Poor satisfaction is the largest category among the reviewed passengers. This indicates an opportunity for
+  airlines to improve customer experience and service quality.
+  
+2. Average Rating for Service Quality
+   
+- Calculated the average passenger rating for each of the six service categories using the mean() function.
+- Cabin staff service received the highest average rating (3.07), indicating comparatively better passenger feedback.
+- Ground service received the lowest average rating (2.58), followed by value for money (2.61).
+- Food and beverages (2.80), inflight entertainment (2.83), and seat comfort (2.84) received relatively similar average ratings.
+- Compared the average ratings across service categories to identify areas with comparatively lower passenger ratings.  
+- The analysis shows that cabin staff service received the highest average rating, while ground service and value for money received the
+  lowest.These results highlight areas where airlines can focus on improving passenger experience and service quality.
   
 ## Expected Outcomes
 - Passenger satisfaction analysis
