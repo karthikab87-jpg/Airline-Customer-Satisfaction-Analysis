@@ -251,6 +251,29 @@ Visualization
 - This indicates that passengers rated cabin staff service relatively better, while ground service and value for money are the key areas
   that need improvement.
 
+3. Traveller Type Distribution (Pie Chart)
+
+- The pie chart shows that Solo Leisure travellers contributed the highest percentage of reviews (37.5%), followed by Couple Leisure
+  travellers (24.2%) and Family Leisure travellers (20.7%).
+- Business travellers contributed the lowest percentage of reviews (17.6%).
+- This indicates that leisure travellers, particularly solo travellers, account for a larger share of the reviews in the dataset compared
+  to business travellers.
+
+4.Trip Verification Status (Matplotlib Bar Chart)
+
+- Used a bar chart to compare the average overall ratings between verified and non-verified reviews.
+- Verified reviews recorded a higher average overall rating (approximately 4.4) compared to non-verified reviews (approximately 3.0).
+- This indicates that verified reviewers gave relatively higher ratings than non-verified reviewers in this dataset.
+
+5. Seat Type Distribution (Matplotlib Pie Chart)
+   
+- Used a pie chart to visualize the percentage distribution of passenger reviews across different seat types.
+- Economy Class contributed the highest percentage of reviews (75.9%), followed by Business Class (16.9%).
+- Premium Economy and First Class contributed much smaller shares of reviews.
+- This indicates that the dataset contains significantly more feedback from Economy Class passengers compared to other seat types.
+
+
+
 ## Expected Outcomes
 - Passenger satisfaction analysis
 - Comparison of seven service categories
