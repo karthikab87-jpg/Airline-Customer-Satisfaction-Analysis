@@ -203,12 +203,12 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
 - Evaluate customer satisfaction and service quality among Indian airlines.
 - Identify areas where airlines can improve customer experience.
   
-3. EDA Methodology
+**3. EDA Methodology**
    
-3.1 Univariate Analysis
-Univariate analysis was performed to understand individual variables and their distributions.
+#### 3.1 Univariate Analysis
+     Univariate analysis was performed to understand individual variables and their distributions.
 
-Analyses performed:
+##### Analyses performed:
 - Examined numerical variables using descriptive statistics, including mean, median, standard deviation, minimum and maximum values.
 - Examined categorical variables using frequency counts and percentage distributions.
 - Analysed the distribution of overall customer ratings using histograms and count plots.
@@ -216,51 +216,55 @@ Analyses performed:
 - Analysed available ratings across the six service categories.
 - Examined distributions of traveller types, seat types, trip verification and recommendation status.
   
-3.2 Bivariate Analysis
-Bivariate analysis was performed to understand relationships between two variables.
+#### 3.2 Bivariate Analysis
+     Bivariate analysis was performed to understand relationships between two variables.
 
-Analyses performed:
+##### Analyses performed:
 - Compared average overall ratings between customers who recommended the airline and those who did not.
 - Compared average overall ratings across global airlines, considering airlines with at least 100 reviews.
 - Analysed the relationship between seat type and customer satisfaction level using Seaborn visualisations.
 - Compared average overall ratings across traveller types and seat types.
   
-3.3 Multivariate Analysis
-Multivariate analysis was performed to examine relationships among three or more variables.
+#### 3.3 Multivariate Analysis
+     Multivariate analysis was performed to examine relationships among three or more variables.
 
-Analyses performed:
+##### Analyses performed:
 - Examined correlations among the six service quality factors using a correlation matrix and heatmap.
 - Analysed customer ratings based on traveller type and seat category.
 - Compared customer satisfaction across Indian airlines, traveller types and seat categories.
 - Compared service quality ratings between highly satisfied and poorly satisfied passengers across Indian airlines.
 - Conducted detailed Hainan Airlines analysis by comparing overall ratings based on trip verification and recommendation status.
   
-4. Important Findings and Key Insights
+**4. Important Findings and Key Insights**
    
-4.1 Overall Customer Rating Distribution
-Findings:
+#### 4.1 Overall Customer Rating Distribution
+
+##### Findings:
 - Average overall rating: 4.34 out of 10.
 - Median rating: 3.
 - Most frequently given rating:1.
   
-Key Insight:
+##### Key Insight:
 
 The concentration of low ratings indicates that a considerable proportion of passengers reported unsatisfactory airline experiences.
 
-4.2 Customer Satisfaction Distribution
-Findings:
-Satisfaction level	Percentage
+#### 4.2 Customer Satisfaction Distribution
+
+##### Findings:
+
+- Satisfaction level	Percentage
 Poor	47.65%
 High	41.65%
 Medium	10.70%
 
-Key Insight:
+##### Key Insight:
 
-Poor satisfaction was more common than high satisfaction, indicating a need for improvements in overall passenger experience.
+- Poor satisfaction was more common than high satisfaction, indicating a need for improvements in overall passenger experience.
 
-4.3 Global Airline Performance Comparison
+#### 4.3 Global Airline Performance Comparison
 
-Findings:
+##### Findings:
+
 - Highest-rated airline: Hainan Airlines – 8.49.
 - China Southern Airlines – 7.99.
 - Garuda Indonesia – 7.95.
@@ -268,27 +272,30 @@ Findings:
 - GoAir – 1.92.
 Only airlines with at least 100 reviews were considered.
 
-Key Insight:
+##### Key Insight:
 
 Hainan Airlines emerged as the highest-rated airline in the comparison. It was selected for further detailed analysis to understand its customer ratings and recommendation patterns.
 
-4.4 Detailed Hainan Airlines Analysis
+#### 4.4 Detailed Hainan Airlines Analysis
 
-Findings:
-Trip verification	Recommendation	Reviews	Average rating
+##### Findings:
+
+- Trip verification	Recommendation	Reviews	Average rating
 Verified	Yes	269	9.22
 Verified	No	39	3.62
 Not Verified	Yes	5	9.00
 Unknown	Yes	23	8.65
 Unknown	No	3	4.67
 
-Key Insight:
+##### Key Insight:
 
-Verified customers who recommended Hainan Airlines gave the highest average rating of 9.22. In contrast, verified customers who did not recommend the airline gave an average rating of 3.62. This highlights a strong association between recommendation behaviour and overall customer ratings.
+- Verified customers who recommended Hainan Airlines gave the highest average rating of 9.22. In contrast, verified customers who did not  recommend the airline gave an average rating of 3.62. This highlights a strong association between recommendation behaviour and overall
+   customer ratings.
 
-4.5 Global Service Quality Analysis
+#### 4.5 Global Service Quality Analysis
 
-Findings:
+##### Findings:
+
 Service category	Average rating
 Cabin staff service	3.07
 Ground service	2.58
@@ -296,46 +303,50 @@ Ground service	2.58
 - Cabin staff service received the highest average rating.
 - Ground service received the lowest average rating.
   
-Key Insight:
+##### Key Insight:
 
 Cabin staff service performed relatively better, whereas ground service was the weakest service area. Ground service requires greater attention to improve passenger experience.
 
-4.6 Traveller Type and Seat Type Analysis
+#### 4.6 Traveller Type and Seat Type Analysis
 
-Findings:
+##### Findings:
+
 - Highest average rating: Solo Leisure passengers in Business Class – 6.79.
 - Lowest average rating: Couple Leisure passengers in Economy Class – 3.53.
 - Economy Class accounted for the highest number of reviews.
   
-Key Insight:
+##### Key Insight:
 
 Customer ratings varied according to traveller type and seat category. Business Class generally received higher ratings across the traveller groups shown in the analysis.
 
-4.7 Correlation Between Service Ratings
+#### 4.7 Correlation Between Service Ratings
 
-Findings:
+##### Findings:
+
 - All six service factors showed positive correlations.
 - Strongest correlation: Ground service and value for money – 0.80.
 - Weakest correlation: Inflight entertainment and ground service – 0.60.
   
-Key Insight:
+##### Key Insight:
 
 Customers who rated one service factor highly tended to give higher ratings to other service factors as well. Ground service and value for money showed the strongest relationship.
 
-4.8 Indian Airline Customer Satisfaction
+#### 4.8 Indian Airline Customer Satisfaction
 
-Findings:
+##### Findings:
+
 - Vistara appeared frequently among the combinations with higher satisfaction percentages.
 - Solo Leisure passengers travelling in Vistara Premium Economy recorded the highest displayed satisfaction percentage of 81.82%.
 - Satisfaction varied across airlines, traveller types and seat categories.
   
-Key Insight:
+##### Key Insight:
 
 Customer satisfaction differed across Indian airlines and passenger categories. Vistara showed strong satisfaction in several combinations, particularly among Solo Leisure passengers in Premium Economy.
 
-4.9 Indian Airline Service Quality Analysis
+#### 4.9 Indian Airline Service Quality Analysis
 
-Findings:
+##### Findings:
+
 Service category	High satisfaction	Poor satisfaction
 Value for money	4.38	1.24
 Cabin staff service	4.28	1.76
@@ -347,11 +358,11 @@ The remaining service-category values can be added from your final comparison ou
 - Ground service and cabin staff service also showed considerable differences.
 - Inflight entertainment remained a comparatively weaker-rated factor even among highly satisfied passengers.
   
-Key Insight:
+##### Key Insight:
 
 Value for money was the strongest differentiating factor between highly satisfied and poorly satisfied passengers. Improving value for money and other weaker service areas may help airlines improve customer satisfaction.
 
-5. Challenges Faced During Analysis
+**5. Challenges Faced During Analysis**
 The following challenges were encountered while analysing the airline review dataset:
 
 1. Missing Values: Several columns contained missing values. Aircraft and Wi-Fi connectivity had a high percentage of missing values, making them unsuitable for further analysis.
@@ -361,7 +372,7 @@ The following challenges were encountered while analysing the airline review dat
 5. Data Distribution: Customer reviews were not evenly distributed across airlines, traveller types and seat categories, making some comparisons less representative than others.
 6. Visualisation Challenges: Some charts contained too many categories or overlapping data points. Appropriate chart types, filtering and formatting were used to improve readability.
    
-6. Suggestions and Recommendations
+**6. Suggestions and Recommendations**
    
 Based on the analysis, the following recommendations can help airlines improve customer experience:
 - Improve Ground Services: Focus on check-in procedures, airport assistance and other ground service experiences.
@@ -372,7 +383,7 @@ Based on the analysis, the following recommendations can help airlines improve c
 - Focus on Passenger Segments: Consider the different expectations of passengers based on traveller type and seat category.
 - Monitor Customer Satisfaction: Regularly analyse customer feedback to identify service weaknesses and track improvements.
   
-7. Project Outcomes
+**7. Project Outcomes**
    
 Through this analysis, the following outcomes were achieved:
 - Identified overall customer rating and satisfaction patterns across airline reviews.
@@ -384,13 +395,13 @@ Through this analysis, the following outcomes were achieved:
 - Evaluated customer satisfaction and service quality patterns among Indian airlines.
 - Identified important service areas that require improvement.
   
-8. Conclusion
+**8. Conclusion**
    
-This project provided a detailed analysis of airline customer satisfaction and service quality using customer review data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction levels, airline performance and service quality were identified.
+- This project provided a detailed analysis of airline customer satisfaction and service quality using customer review data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction levels, airline performance and service quality were identified.
 
-The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat categories and Indian airlines.
+- The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat categories and Indian airlines.
 
-Overall, the project demonstrates how data analysis can help understand customer feedback, identify service weaknesses and support data-driven decisions to improve airline service quality and passenger satisfaction.
+- Overall, the project demonstrates how data analysis can help understand customer feedback, identify service weaknesses and support data-driven decisions to improve airline service quality and passenger satisfaction.
 
 ## Expected Outcomes
 - Passenger satisfaction analysis
