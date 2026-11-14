@@ -94,7 +94,9 @@ This project analyzes airline passenger reviews and ratings to understand custom
   
 ##### 2. Mode Imputation
 
-- Replaced missing values in the seat_type column with the mode (most frequently occurring category) because only 37 values were missing.
+- Replaced missing values in the seat_type,type_of_traveller, route and recommended columns, with the mode (most frequently occurring
+  category).
+- These columns had a manageable proportion of missing values compared with the total number of records. 
 - This helped retain records while maintaining consistency in the categorical data.
    
 ##### 3. Removing the aircraft Column
@@ -128,11 +130,17 @@ This project analyzes airline passenger reviews and ratings to understand custom
    
 - Removed leading and trailing spaces from all categorical columns to maintain consistent category values and avoid unwanted variations.
   
-##### 4. Standardising route column values
+##### 4. Cleaning Text Columns (review_header and review_text)
+
+- Converted the review_header column to title case to maintain consistent text formatting.
+- Converted the review_text column to lowercase for uniformity.
+- Removed commas from both columns to eliminate unnecessary punctuation.
+
+##### 5. Standardising route column values
 
 - Identified unwanted commas in a few route values and removed them to maintain consistent formatting across the route column.
 
-##### 5. Rechecking Categorical Value Counts
+##### 6. Rechecking Categorical Value Counts
    
 - Examined the value counts again after standardisation and space removal to verify consistency in the categorical data.
 
@@ -174,103 +182,69 @@ After completing data cleaning and preprocessing, Exploratory Data Analysis (EDA
 
 #### Descriptive Statistics
    
-- Used describe() to examine the statistical summary of numerical columns and describe(include='all') to understand both numerical and
+- Used describe() to examine the statistical summary of numerical columns and describe(include='str') to understand statistical summary of
   categorical columns.
   
 #### Univariate,Bivariate and Multivariate Analysis
 
-1. Overall Rating and Satisfaction Level Distribution
+**1. Overall Rating and Satisfaction Level Distribution**
 
-- Analysed the frequency distribution of over_all_rating to understand passenger rating patterns.
-- Examined the satisfaction_level column to understand the distribution of Poor, Medium, and High satisfaction categories.
+- Performed univariate analysis to examine the distribution of over_all_rating and satisfaction_level.
+- Used histograms with Matplotlib to visualize passenger rating patterns.
+- Used pie chart with Matplotlib to visualize satisfaction distribution.
 - Calculated the percentage of passengers in each satisfaction category.
-- Excluded the Unknown category from percentage calculations because it does not represent a known satisfaction level.
-- Poor satisfaction accounts for the highest percentage (47.65%), followed by High (41.65%) and Medium (10.70%).
-- The analysis shows that Poor satisfaction is the largest category among the reviewed passengers. This indicates an opportunity for
-  airlines to improve customer experience and service quality.
+- Finding: Poor satisfaction was highest (47.65%), followed by High (41.65%) and Medium (10.70%).
+- This indicates a need for airlines to improve customer satisfaction and service quality.
   
-2. Average Rating for Service Quality
-   
-- Calculated the average passenger rating for each of the six service categories using the mean() function.
-- Cabin staff service received the highest average rating (3.07), indicating comparatively better passenger feedback.
-- Ground service received the lowest average rating (2.58), followed by value for money (2.61).
-- Food and beverages (2.80), inflight entertainment (2.83), and seat comfort (2.84) received relatively similar average ratings.
-- Compared the average ratings across all six service categories and sorted them in ascending order to identify the three lowest-rated
-  service categories.
-- The analysis shows that cabin staff service received the highest average rating, while ground service and value for money received the
-  lowest.These results highlight areas where airlines can focus on improving passenger experience and service quality.
+**2. Average Rating for Service Quality**
+
+- Performed univariate analysis to examine the average ratings of six service categories using the mean() function.
+- Used a Matplotlib bar chart to compare the average ratings.
+- Sorted the ratings in ascending order to identify the lowest-rated services.
+**Findings:**
+- Cabin staff service received the highest rating (3.07).
+- Ground service received the lowest rating (2.58), followed by value for money (2.61).
+- Other service categories received ratings between 2.80 and 2.84.
+- The results highlight ground service and value for money as key areas for improvement.
   
-3. Trip Verification Analysis
+**3. Trip Verification Analysis**
    
 - This analysis examines the distribution of verified and non-verified passenger reviews to understand how many reviews are associated
   with confirmed travel experiences.
+- Used a Seaborn count plot to visualize the number of reviews in each category.
+- Finding: Identified the number of reviews associated with verified and non-verified travel experiences.
+  
+**4. Recommendation Status Analysis** 
 
-4. Recommendation Status Analysis
+- Examined the percentage distribution of Yes and No recommendations.
+- Used a bar chart to compare the average overall ratings for both categories.
+**Findings:**
+- 61.70% of passengers did not recommend the airline(average rating: 1.87).
+- 38.30% recommended the airline(average rating: 8.34).
+- The analysis shows a strong relationship between overall ratings and passengers' recommendation decisions.
+ 
+**5. Airline-Wise Overall Rating Analysis**
+
+- Grouped reviews by airline and calculated the review count and average overall rating.
+- Set a minimum threshold of 100 reviews to ensure a fair comparison.
+- Used a bar chart to compare the top 5 and bottom 5 airlines.
+** Findings:** Hainan Airlines received the highest average rating (8.49), while Silver Airways received the lowest (1.82).
+
+**6. Traveller Type-wise Overall Rating Analysis**
+
+- Grouped reviews by traveller type and calculated the review count and average overall rating.
+- Used a bar chart to compare average ratings across traveller categories.
+**Findings:**
+- Solo travellers had the highest number of reviews (23,271) and the highest average rating (4.76), while family travellers
+  had the lowest average rating (3.82).
+
+**7. Customer Satisfaction Analysis by Seat Type**
    
-- Calculated the percentage distribution of Yes and No recommendations.
-- Compared the average overall ratings across both recommendation categories.
-- Passengers who did not recommend the airline accounted for 61.70%, with an average rating of 1.87.
-- Passengers who recommended the airline accounted for 38.30%, with an average rating of 8.34.
-- Identified a strong relationship between passengers' overall ratings and their recommendation decisions.
+- Examined the distribution of High, Medium, and Poor satisfaction levels across different seat types.
+- Used a Seaborn count plot to compare satisfaction levels across seat categories.
+- Finding: Economy Class had the highest number of reviews, while the plot helped compare satisfaction patterns across all seat types.
 
-5. Airline-Wise Overall Rating Analysis
-   
-- Initially identified airlines with very few reviews, as small sample sizes could make average ratings less representative (e.g.,an
-  airline with only 2 reviews had a high rating).
-- Used descriptive statistics to examine the distribution of review counts and selected 100 reviews as the minimum threshold for
-  comparison.
-- Grouped the data by airline and calculated the review count and average overall rating.
-- Filtered airlines with at least 100 reviews and identified the top 5 and bottom 5 airlines based on average ratings.
-- Hainan Airlines recorded the highest average rating (8.49), while Silver Airways recorded the lowest (1.82).
 
-6. Traveller Type-wise Overall Rating Analysis
-   
-- Grouped the reviews by traveller type.
-- Calculated the number of available overall ratings and the average overall rating for each traveller category.
-- Solo leisure travellers had the highest number of reviews (23,271) and the highest average overall rating (4.76).
-- Family leisure travellers recorded the lowest average overall rating (3.82).
-
-7. Seat Type-Wise Analysis
-
-- Business Class passengers gave the highest average overall ratings, while Economy Class passengers gave the lowest average ratings.
-
-Visualization
-
-1. Overall Rating Distribution (Matplotlib Histogram)
-
-- Used a histogram to visualize the frequency distribution of passenger overall ratings and understand how the ratings are spread across
-  the 1–10 scale.
-- The histogram shows a very high frequency of low ratings, particularly at rating 1.
-- A considerable number of passengers also gave higher ratings (7–10), while comparatively fewer ratings fall in the middle range.
-- This indicates that passenger opinions are divided, with many passengers giving either low or high ratings.
-
-2. Service-wise Average Rating Comparison(Horizontal Bar Chart)
-
-- The chart shows that cabin staff service received the highest average rating, followed by seat comfort and inflight entertainment.
-- Ground service received the lowest average rating, followed by value for money.
-- This indicates that passengers rated cabin staff service relatively better, while ground service and value for money are the key areas
-  that need improvement.
-
-3. Traveller Type Distribution (Pie Chart)
-
-- The pie chart shows that Solo Leisure travellers contributed the highest percentage of reviews (37.5%), followed by Couple Leisure
-  travellers (24.2%) and Family Leisure travellers (20.7%).
-- Business travellers contributed the lowest percentage of reviews (17.6%).
-- This indicates that leisure travellers, particularly solo travellers, account for a larger share of the reviews in the dataset compared
-  to business travellers.
-
-4.Trip Verification Status (Matplotlib Bar Chart)
-
-- Used a bar chart to compare the average overall ratings between verified and non-verified reviews.
-- Verified reviews recorded a higher average overall rating (approximately 4.4) compared to non-verified reviews (approximately 3.0).
-- This indicates that verified reviewers gave relatively higher ratings than non-verified reviewers in this dataset.
-
-5. Seat Type Distribution (Matplotlib Pie Chart)
-   
-- Used a pie chart to visualize the percentage distribution of passenger reviews across different seat types.
-- Economy Class contributed the highest percentage of reviews (75.9%), followed by Business Class (16.9%).
-- Premium Economy and First Class contributed much smaller shares of reviews.
-- This indicates that the dataset contains significantly more feedback from Economy Class passengers compared to other seat types.
 
 
 
