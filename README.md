@@ -183,15 +183,15 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - The final dataset contains 64,676 rows and 19 columns.
 - The cleaned and structured dataset is now ready for Exploratory Data Analysis (EDA).
 
-Phase 3 – Exploratory Data Analysis and Insights
+### Exploratory Data Analysis and Insights
 
-1. Introduction
+**1. Introduction**
    
 Exploratory Data Analysis (EDA) was performed to understand customer satisfaction patterns, evaluate airline performance and identify service quality factors influencing passenger experience.
 
 The analysis was conducted using Python libraries such as Pandas, Matplotlib, Seaborn and Plotly. Univariate, bivariate and multivariate techniques were used to explore individual variables and relationships between different variables.
 
-2. Objectives of EDA
+**2. Objectives of EDA**
    
 - Understand the distribution of overall customer ratings and satisfaction levels.
 - Identify the lowest-rated service categories.
