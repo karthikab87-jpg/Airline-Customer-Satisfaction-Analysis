@@ -1,10 +1,10 @@
-# Airline-Customer-Satisfaction-Analysis
+## Airline-Customer-Satisfaction-Analysis
 Analysis of airline passenger satisfaction and service quality using Python, Pandas, and data visualization.
 
-## Project Overview
+### Project Overview
 This project analyzes airline passenger reviews and ratings to understand customer satisfaction and service quality. It compares overall passenger ratings and evaluates seven airline service categories to identify areas that may require improvement.
 
-## Project Objectives
+### Project Objectives
 
 - Classify overall passenger ratings into satisfaction categories.
 - Calculate and compare average ratings across seven service categories.
@@ -19,7 +19,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Compare service quality ratings between highly satisfied and poorly satisfied passengers across Indian airlines to identify areas
   requiring improvement.
 
-## Dataset Source
+### Dataset Source
 
 **Source:** Mendeley Data – Airline Travel Reviews Data (Skytrax)
 
@@ -27,7 +27,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 **Rows and Columns:** Dataset contains 64,740 rows and 19 columns before data cleaning.
 
-## Tools and Technologies
+### Tools and Technologies
 
 - Python
 - Jupyter Notebook
@@ -36,14 +36,15 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Seaborn
 - Plotly
 
-## Repository Contents
+### Repository Contents
 
 - Airline_Customer_Satisfaction_Analysis_SRS.pdf – Software Requirements Specification
 - Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 1 analysis notebook
 - Airline_Customer_Satisfaction_Analysis_Phase2.ipynb – Phase 2 analysis notebook
+- Airline_Customer_Satisfaction_Analysis_Phase2.ipynb – Phase 3 analysis notebook
 - data/ – Dataset folder
 
-## How to Run the Notebook
+### How to Run the Notebook
 
 1. Download or clone this repository.
 2. Install Python, Jupyter Notebook, and the required libraries.
@@ -51,13 +52,13 @@ This project analyzes airline passenger reviews and ratings to understand custom
 4. Ensure the dataset is available in the data/ folder.
 5. Run the notebook cells from top to bottom.
 
-## Phase 1 – Project Planning and SRS
+### Project Planning and SRS
 
 - Identified and selected a suitable Skytrax airline review dataset based on the project requirements and given conditions.
 - Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
 - Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
 
-## Phase 2 – Data Cleaning and Preprocessing
+### Data Cleaning and Preprocessing
 
 - Imported and inspected the dataset, identified and handled missing values, removed duplicate records, standardized categorical            values,converted date columns into datetime format, and validated rating ranges. Created two new features: satisfaction_level and         average_service_rating, to support further analysis.
 
@@ -363,6 +364,7 @@ The remaining service-category values can be added from your final comparison ou
 Value for money was the strongest differentiating factor between highly satisfied and poorly satisfied passengers. Improving value for money and other weaker service areas may help airlines improve customer satisfaction.
 
 **5. Challenges Faced During Analysis**
+
 The following challenges were encountered while analysing the airline review dataset:
 
 1. Missing Values: Several columns contained missing values. Aircraft and Wi-Fi connectivity had a high percentage of missing values, making them unsuitable for further analysis.
@@ -403,10 +405,5 @@ Through this analysis, the following outcomes were achieved:
 
 - Overall, the project demonstrates how data analysis can help understand customer feedback, identify service weaknesses and support data-driven decisions to improve airline service quality and passenger satisfaction.
 
-## Expected Outcomes
-- Passenger satisfaction analysis
-- Comparison of six service categories
-- Identification of the three lowest-rated service areas
-- Visualizations and key findings related to airline service quality
 
 
