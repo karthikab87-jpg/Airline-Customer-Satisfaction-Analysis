@@ -246,7 +246,6 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
 - Most frequently given rating:1.
   
 ##### Key Insight:
-
 The concentration of low ratings indicates that a considerable proportion of passengers reported unsatisfactory airline experiences.
 
 #### 4.2 Customer Satisfaction Distribution
