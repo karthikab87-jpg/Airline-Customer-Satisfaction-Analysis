@@ -277,7 +277,21 @@ Only airlines with at least 100 reviews were considered.
 
 Hainan Airlines emerged as the highest-rated airline in the comparison. It was selected for further detailed analysis to understand its customer ratings and recommendation patterns.
 
-#### 4.4 Detailed Hainan Airlines Analysis
+#### 4.4 Global Service Ratings: High vs Poor Satisfaction
+
+##### Findings:
+
+- Highly satisfied passengers gave higher ratings across all six service categories.
+- Cabin staff service received the highest rating among highly satisfied passengers.
+- Value for money showed the largest difference between the two satisfaction groups.
+- Ground service and value for money received comparatively low ratings among poorly satisfied passengers.
+  
+##### Key Insight:
+
+- Better service ratings were associated with higher customer satisfaction. Value for money and ground service were important areas for
+  improvement.
+
+#### 4.5 Detailed Hainan Airlines Analysis
 
 ##### Findings:
 
@@ -291,16 +305,18 @@ Unknown	No	3	4.67
 ##### Key Insight:
 
 - Verified customers who recommended Hainan Airlines gave the highest average rating of 9.22. In contrast, verified customers who did not  recommend the airline gave an average rating of 3.62. This highlights a strong association between recommendation behaviour and overall
-   customer ratings.
+ customer ratings.
 
-#### 4.5 Global Service Quality Analysis
+#### 4.6 Global Service Quality Analysis
 
 ##### Findings:
 
-Service category	Average rating
 Cabin staff service	3.07
+Seat comfort	2.84
+Inflight entertainment	2.83
+Food and beverages	2.80
+Value for money	2.61
 Ground service	2.58
-
 - Cabin staff service received the highest average rating.
 - Ground service received the lowest average rating.
   
@@ -308,7 +324,7 @@ Ground service	2.58
 
 Cabin staff service performed relatively better, whereas ground service was the weakest service area. Ground service requires greater attention to improve passenger experience.
 
-#### 4.6 Traveller Type and Seat Type Analysis
+#### 4.7 Traveller Type and Seat Type Analysis
 
 ##### Findings:
 
@@ -320,7 +336,7 @@ Cabin staff service performed relatively better, whereas ground service was the 
 
 Customer ratings varied according to traveller type and seat category. Business Class generally received higher ratings across the traveller groups shown in the analysis.
 
-#### 4.7 Correlation Between Service Ratings
+#### 4.8 Correlation Between Service Ratings
 
 ##### Findings:
 
@@ -332,7 +348,7 @@ Customer ratings varied according to traveller type and seat category. Business 
 
 Customers who rated one service factor highly tended to give higher ratings to other service factors as well. Ground service and value for money showed the strongest relationship.
 
-#### 4.8 Indian Airline Customer Satisfaction
+#### 4.9 Indian Airline Customer Satisfaction
 
 ##### Findings:
 
@@ -344,7 +360,7 @@ Customers who rated one service factor highly tended to give higher ratings to o
 
 Customer satisfaction differed across Indian airlines and passenger categories. Vistara showed strong satisfaction in several combinations, particularly among Solo Leisure passengers in Premium Economy.
 
-#### 4.9 Indian Airline Service Quality Analysis
+#### 4.10 Indian Airline Service Quality Analysis
 
 ##### Findings:
 
@@ -386,24 +402,35 @@ Based on the analysis, the following recommendations can help airlines improve c
 - Monitor Customer Satisfaction: Regularly analyse customer feedback to identify service weaknesses and track improvements.
   
 **7. Project Outcomes**
-   
+
 Through this analysis, the following outcomes were achieved:
+
 - Identified overall customer rating and satisfaction patterns across airline reviews.
 - Evaluated airline performance and identified the highest- and lowest-rated airlines.
-- Identified Hainan Airlines as the highest-rated airline and performed further detailed analysis.
-- Identified differences in service quality ratings between highly satisfied and poorly satisfied passengers.
-- Examined relationships among six service quality factors using correlation analysis.
+- Identified Hainan Airlines as the highest-rated airline and conducted further detailed analysis.
+- Compared service quality ratings between highly satisfied and poorly satisfied passengers.
+- Examined relationships among six service quality ratings using correlation analysis.
 - Identified variations in customer ratings across traveller types and seat categories.
 - Evaluated customer satisfaction and service quality patterns among Indian airlines.
-- Identified important service areas that require improvement.
-  
+- Identified important service areas that require improvement to enhance passenger satisfaction.
+
+**Areas for Improvement**
+
+**Value for Money:** Improve the balance between ticket prices and the quality of services provided.
+**Ground Service:** Improve airport assistance, check-in support, boarding services and passenger handling.
+**Inflight Entertainment:** Improve entertainment options and system quality.
+**Food and Beverages:** Focus on food quality, variety and passenger preferences.
+**Seat Comfort:** Improve seating comfort and passenger convenience.
+**Cabin Staff Service:** Maintain good staff behaviour, communication and passenger support.
+
 **8. Conclusion**
    
 - This project provided a detailed analysis of airline customer satisfaction and service quality using customer review data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction levels, airline performance and service quality were identified.
 
 - The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat categories and Indian airlines.
 
-- Overall, the project demonstrates how data analysis can help understand customer feedback, identify service weaknesses and support data-driven decisions to improve airline service quality and passenger satisfaction.
+- Overall, the project demonstrates how data analysis can help understand customer feedback, identify service weaknesses and support data-driven decisions to improve airline service quality and passenger satisfaction. Airlines can use these findings to identify weak service areas, improve passenger experience and make better data-driven decisions.
+
 
 
 
