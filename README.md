@@ -468,10 +468,15 @@ Identified service factors that received comparatively lower ratings, particular
 **Areas for Improvement**
 
 **Value for Money:** Improve the balance between ticket prices and the quality of services provided.
+
 **Ground Service:** Improve airport assistance, check-in support, boarding services and passenger handling.
+
 **Inflight Entertainment:** Improve entertainment options and system quality.
+
 **Food and Beverages:** Focus on food quality, variety and passenger preferences.
+
 **Seat Comfort:** Improve seating comfort and passenger convenience.
+
 **Cabin Staff Service:** Maintain good staff behaviour, communication and passenger support.
 
 **9. Conclusion**
