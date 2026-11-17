@@ -2,15 +2,17 @@
 Analysis of airline passenger satisfaction and service quality using Python, Pandas, and data visualization.
 
 ### Project Overview
-This project analyzes airline passenger reviews and ratings to understand customer satisfaction and service quality. It compares overall passenger ratings and evaluates seven airline service categories to identify areas that may require improvement.
+This project analyzes airline passenger reviews and ratings to understand customer satisfaction and service quality. It compares overall passenger ratings and evaluates six airline service categories to identify areas that may require improvement.
 
 ### Project Objectives
 
 - Classify overall passenger ratings into satisfaction categories.
-- Calculate and compare average ratings across seven service categories.
+- Calculate and compare average ratings across six service categories.
 - Identify the three lowest-rated service areas.
 - Compare ratings between passengers who recommend the airline and those who do not.
 - Analyze satisfaction across airlines, traveller types, and seat types.
+- Compared service quality ratings between highly satisfied and poorly satisfied passengers across global airlines to identify
+  differences in service performance and areas requiring improvement.
 - Conduct a detailed analysis of Hainan Airlines, the highest-rated airline, by comparing overall ratings based on trip verification and
   recommendation status.
 - Analyse the relationship between different service quality factors using correlation analysis.
@@ -39,11 +41,11 @@ This project analyzes airline passenger reviews and ratings to understand custom
 ### Repository Contents
 
 - Airline_Customer_Satisfaction_Analysis_SRS.pdf – Software Requirements Specification
-- Airline_Customer_Satisfaction_Analysis_Phase1.ipynb – Phase 1 analysis notebook
-- Airline_Customer_Satisfaction_Analysis_Phase2.ipynb – Phase 2 analysis notebook
-- Airline_Customer_Satisfaction_Analysis_Phase2.ipynb – Phase 3 analysis notebook
-- data/ – Dataset folder
+- Airline_Customer_Satisfaction_Analysis-Notebook
+- Airline_Customer_Satisfaction_Analysis_Documentation
 
+- data/ – Dataset folder: Created to organise and store the project dataset as instructed. Due to GitHub's file size restrictions, the original dataset could not be uploaded directly into this folder. Therefore, the dataset was compressed into a ZIP file and uploaded separately to the repository.
+  
 ### How to Run the Notebook
 
 1. Download or clone this repository.
@@ -52,13 +54,17 @@ This project analyzes airline passenger reviews and ratings to understand custom
 4. Ensure the dataset is available in the data/ folder.
 5. Run the notebook cells from top to bottom.
 
-### Project Planning and SRS
+### Phase 1: Project Planning and SRS
 
 - Identified and selected a suitable Skytrax airline review dataset based on the project requirements and given conditions.
 - Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
 - Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
-
-### Data Cleaning and Preprocessing
+- Imported the required Python libraries, including Pandas, NumPy, Matplotlib and Seaborn, for data analysis and visualisation.
+- Loaded the airline review dataset into the Python environment.
+- Performed initial dataset exploration using head(), tail(), shape, columns, info() and dtypes to understand the dataset structure,
+  dimensions, column names and data types.
+  
+### Phase 2: Data Cleaning and Preprocessing
 
 - Imported and inspected the dataset, identified and handled missing values, removed duplicate records, standardized categorical            values,converted date columns into datetime format, and validated rating ranges. Created two new features: satisfaction_level and         average_service_rating, to support further analysis.
 
@@ -66,21 +72,33 @@ This project analyzes airline passenger reviews and ratings to understand custom
      
 - Created a copy of the original dataset to preserve the raw data. This allows cleaning operations to be performed without changing the     original dataset.
   
-#### 2. Checking Missing Values
-   
-- Checked missing values in each column to identify incomplete data and decide how to handle them.
-  
-#### 3. Checking and Removing Duplicate Records
+#### 2. Checking and Removing Duplicate Records
    
 - Identified 64 duplicate records and removed them while keeping the first occurrence to avoid repeated entries affecting the analysis.
 - Checked again to confirm that no duplicate records remained.
- 
-#### 4. Converting Date Columns
-   
+
+#### 3.Initial Data Type Check:
+- Before starting the data cleaning process,I checked the data types of all 19 columns using the Pandas dtypes attribute.
+
+Observations:
+- The dataset contained 19 columns.
+- over_all_rating and the six service rating columns were in float64 format.
+- The remaining 11 columns were stored as string (str) data types.
+- The date columns review_date and date_flown were stored as strings instead of datetime format.
 - Converted review_date and date_flown from text into datetime format to make them suitable for date-based operations and analysis.
 - Assigned the first day of the month as a placeholder for date_flown because the exact travel date was unavailable.
   
-#### 5.Handling Missing Values in Numerical Rating Columns
+#### 4. Checking Missing Values
+   
+- Checked missing values in each column to identify incomplete data and decide how to handle them.
+- Missing values were identified in both numerical and categorical columns.
+- The wifi__connectivity column had the highest number of missing values (41,118), followed by aircraft (36,767) and
+  inflight_entertainment (21,162).
+- Other columns contained varying numbers of missing values, which were reviewed to decide the appropriate missing-value treatment.
+- This step helped identify columns requiring missing-value handling and supported decisions about retaining or dropping columns during
+  data cleaning.
+  
+#### 4.1 Handling Missing Values in Numerical Rating Columns
  
 - Identified missing values in the over_all_rating column and the seven service-rating columns.
 - Retained the missing values without replacement because they represent unavailable passenger feedback.
@@ -90,11 +108,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - The wifi__connectivity column was removed because it contained a high proportion of missing values (approximately 63.5%).
 - This helps keep the service quality analysis focused on categories with more available responses.
   
-#### 7. Validating Rating Values
-   
-- Checked whether overall ratings were within the 1–10 range and service ratings were within the 1–5 range to identify invalid values.
-  
-#### 8. Handling Missing Values in Categorical Columns
+#### 4.2 Handling Missing Values in Categorical Columns
 
 ##### 1. Checking Missing Values
    
@@ -116,50 +130,57 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Replaced missing values in the remaining categorical columns with Unknown to preserve records without making assumptions about the        missing information.
 - This also helps distinguish unavailable information from existing categories.
   
-##### 5. Handling Missing Values in Date Columns
+#### 5. Handling Missing Values in Date Columns
 
 - Checked missing values in the date_flown column.
 - Retained missing values without replacement because the actual travel month and year were unavailable.
 - Avoided filling missing dates with assumed values to maintain the accuracy of date-based analysis.
 
-#### 9.Standardising Categorical Columns
+#### 6. Validating Rating Values
+   
+- Checked whether overall ratings were within the 1–10 range and service ratings were within the 1–5 range to identify invalid values.
 
-##### 1. Checking Categorical Value Counts
+#### 7. Standardising Categorical Columns
+
+##### 7.1 Checking Categorical Value Counts
    
 - Examined the value counts of each categorical column to understand the category distribution and identify inconsistent labels.
   
-##### 2. Standardising the trip_verified Column
+##### 7.2 Standardising the trip_verified Column
    
 - Identified inconsistent labels in the trip_verified column and standardised them into three categories: Verified, Not Verified, and
   Unknown.
 - This helps maintain uniformity and avoids treating similar labels as separate categories.
   
-##### 3. Removing Unwanted Spaces
+##### 7.3 Removing Unwanted Spaces
    
 - Removed leading and trailing spaces from all categorical columns to maintain consistent category values and avoid unwanted variations.
   
-##### 4. Cleaning Text Columns (review_header and review_text)
+##### 7.4 Cleaning Text Columns (review_header and review_text)
 
 - Converted the review_header column to title case to maintain consistent text formatting.
 - Converted the review_text column to lowercase for uniformity.
 - Removed commas from both columns to eliminate unnecessary punctuation.
 
-##### 5. Standardising route column values
+##### 7.5 Standardising route column values
 
-- Identified unwanted commas in a few route values and removed them to maintain consistent formatting across the route column.
+- Identified and corrected inconsistent formatting in the route column.
+- Replaced the invalid character combination ,_ with _ to maintain a consistent route format.
+- Removed the unwanted opening curly bracket { from route values.
+- These corrections helped standardise route names and improve consistency for further analysis.
 
-##### 6. Rechecking Categorical Value Counts
+##### 7.6 Rechecking Categorical Value Counts
    
 - Examined the value counts again after standardisation and space removal to verify consistency in the categorical data.
 
-#### 10. Dataset Overview and Exploration
+#### 8. Dataset Overview and Exploration
 
 - Examined the dataset using head(), columns, shape, info() and describe() to understand its structure, column names, dimensions, data
   types, non-null values and statistical summary.
 - Checked the dataset shape after removing unnecessary columns to verify the updated number of rows and columns before proceeding with
-   further analysis.
+  further analysis.
 
-#### 11. Feature Engineering
+#### 9. Feature Engineering
 
 - Created two new columns from the existing dataset to support further analysis and provide better insights into passenger satisfaction
   and service quality.
@@ -167,7 +188,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 ##### 1. Creating the satisfaction_level Column
    
 - Created a new column named satisfaction_level using the over_all_rating column.
-- Categorised passenger ratings into three groups: Poor, Medium and Positive.
+- Categorised passenger ratings into three groups: Poor, Medium and High.
 - Assigned Unknown to records with missing overall ratings.
 - This feature helps analyse passenger satisfaction levels and calculate the percentage of ratings in each category.
   
@@ -178,13 +199,17 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Missing ratings were excluded from the average calculation.
 - Rows with all six service ratings missing retained a missing value.
   
-### Final Dataset Overview
+#### Final Dataset Overview
 
+- In this phase,I cleaned and prepared the airline review dataset for further analysis. 
+- Removed duplicate records, handled missing values using suitable methods, corrected data types, standardised categorical and text
+  values, and validated rating ranges. 
+- Removed columns with a high proportion of missing values and created two new features: satisfaction_level and average_service_rating.
 - Verified the final dataset after completing data cleaning, preprocessing and feature engineering.
 - The final dataset contains 64,676 rows and 19 columns.
 - The cleaned and structured dataset is now ready for Exploratory Data Analysis (EDA).
 
-### Exploratory Data Analysis and Insights
+### Phase 3: Exploratory Data Analysis(EDA)
 
 **1. Introduction**
    
@@ -198,6 +223,7 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
 - Identify the lowest-rated service categories.
 - Compare customer ratings based on recommendation status.
 - Evaluate global airline performance and identify the highest- and lowest-rated airlines.
+- Evaluate customer satisfaction and service quality among Indian airlines.
 - Investigate the performance of Hainan Airlines through detailed analysis.
 - Understand relationships between service quality factors.
 - Compare ratings across traveller types and seat categories.
@@ -222,15 +248,13 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
 - df.describe(include='object') – summarises categorical columns.
 - df.describe(include='all') – provides summaries for both types.
   
-**4. EDA Methodology**
+### 4. EDA Methodology
    
 #### 4.1 Univariate Analysis
      Univariate analysis was performed to understand individual variables and their distributions.
 
 ##### Analyses performed:
-- Examined numerical variables using descriptive statistics, including mean, median, standard deviation, minimum and maximum values.
-- Examined categorical variables using frequency counts and percentage distributions.
-- Analysed the distribution of overall customer ratings using histograms and count plots.
+- Analysed the distribution of overall customer ratings using histogram.
 - Examined customer satisfaction distribution across Poor, Medium and High categories.
 - Analysed available ratings across the six service categories.
 - Examined distributions of traveller types, seat types, trip verification and recommendation status.
@@ -242,7 +266,9 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
 - Compared average overall ratings between customers who recommended the airline and those who did not.
 - Compared average overall ratings across global airlines, considering airlines with at least 100 reviews.
 - Analysed the relationship between seat type and customer satisfaction level using Seaborn visualisations.
+- Compared service quality ratings between highly satisfied and poorly satisfied passengers across global airlines.
 - Compared average overall ratings across traveller types and seat types.
+- Evaluate customer satisfaction and service quality among Indian airlines.
   
 #### 4.3 Multivariate Analysis
      Multivariate analysis was performed to examine relationships among three or more variables.
@@ -259,7 +285,7 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
 1. DataFrame Creation and Aggregation
    
 - Grouped the airline review data using Pandas groupby() to calculate summary statistics, such as average overall ratings and High
-  satisfaction percentages for each airline.
+  satisfaction percentages for each airline during the analysis.
 
 3. DataFrame Merging (pd.merge())
    
@@ -275,7 +301,7 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
 - Created a single DataFrame containing the selected airlines.
 - Used the combined DataFrame for comparing service quality across the top-performing and bottom-performing airlines.
 
-**5. Important Findings and Key Insights**
+### 5. Important Findings and Key Insights
    
 #### 5.1 Overall Customer Rating Distribution
 
@@ -291,10 +317,11 @@ The concentration of low ratings indicates that a considerable proportion of pas
 
 ##### Findings:
 
-- Satisfaction level	Percentage
-Poor	47.65%
-High	41.65%
-Medium	10.70%
+- Poor satisfaction accounted for the highest percentage of reviews at 47.65%.
+- High satisfaction represented 41.65% of reviews.
+- Medium satisfaction accounted for the lowest percentage at 10.70%.
+- Overall, Poor satisfaction was higher than High satisfaction, indicating that negative passenger experiences formed a significant
+  portion of the reviews.
 
 ##### Key Insight:
 
@@ -407,16 +434,20 @@ Customer satisfaction differed across Indian airlines and passenger categories. 
 
 Value for money was the strongest differentiating factor between highly satisfied and poorly satisfied passengers. Improving value for money and other weaker service areas may help airlines improve customer satisfaction.
 
-**6. Challenges Faced During Analysis**
+### 6. Challenges Faced During Analysis
 
 The following challenges were encountered while analysing the airline review dataset:
 
-1. Missing Values: Several columns contained missing values. Aircraft and Wi-Fi connectivity had a high percentage of missing values, making them unsuitable for further analysis.
-2. Duplicate Records: Duplicate records were identified and removed to maintain data accuracy.
-3. Inconsistent Data: Some categorical values and date formats required standardisation before analysis.
-4. Different Rating Scales: Overall ratings were recorded on a 1–10 scale, whereas service quality ratings used a 1–5 scale. These differences were considered during comparisons.
-5. Data Distribution: Customer reviews were not evenly distributed across airlines, traveller types and seat categories, making some comparisons less representative than others.
-6. Visualisation Challenges: Some charts contained too many categories or overlapping data points. Appropriate chart types, filtering and formatting were used to improve readability.
+1. Missing Values: Several columns contained missing values,making data cleaning and preprocessing challenging. The aircraft and
+   wifi__connectivity columns had a high percentage of missing values, making them unsuitable for further analysis.
+2. Duplicate Records: Duplicate records were identified and removed to avoid repeated entries affecting the analysis.
+3. Inconsistent Data: Some categorical values and date formats required standardisation and correction before analysis.
+4. Different Rating Scales: Overall ratings were recorded on a 1–10 scale, whereas service quality ratings used a 1–5 scale. These
+  differences were considered while performing comparisons.
+5. Uneven Data Distribution: Customer reviews were not evenly distributed across airlines, traveller types and seat categories. This made
+   some comparisons less representative due to differences in the number of reviews.
+6. Visualisation Challenges: Some charts contained too many categories or overlapping data points. Appropriate chart types, filtering and
+   formatting were used to improve readability.
    
 **7. Suggestions and Recommendations**
    
@@ -483,7 +514,7 @@ Identified service factors that received comparatively lower ratings, particular
    
 - This project provided a detailed analysis of airline customer satisfaction and service quality using customer review data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction levels, airline performance and service quality were identified.
 
-- The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat categories and Indian airlines.
+- The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat categories and Indian airlines.The analysis also revealed that highly satisfied passengers gave higher ratings across all six service factors compared with poorly satisfied passengers.
 
 - Overall, the project demonstrates how data analysis can help understand customer feedback, identify service weaknesses and support data-driven decisions to improve airline service quality and passenger satisfaction. Airlines can use these findings to identify weak service areas, improve passenger experience and make better data-driven decisions.
 
