@@ -130,7 +130,8 @@ The initial exploration provided an understanding of the dataset's structure, va
 - Removed `wifi__connectivity` because approximately 63.5% of its values were missing.
 - Removed `aircraft` because approximately 56.7% of its values were missing and the column was not required for the project objectives.
 - Filled missing `seat_type` values using the mode.
-- Replaced missing values in `route` and `type_of_traveller` with `Unknown`, preserving records without making assumptions about the missing information.
+- Replaced missing values in `route` and `type_of_traveller` with `Unknown`, preserving records without making assumptions about the
+  missing information.
 - Retained missing `date_flown` values because the actual travel month and year were unavailable.
 - Standardised `trip_verified` into three categories: `Verified`, `Not Verified`, and `Unknown`.
 
