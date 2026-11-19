@@ -44,9 +44,11 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 - Airline_Customer_Satisfaction_Analysis_SRS.pdf – Software Requirements Specification
 - Airline_Customer_Satisfaction_Analysis-Notebook
-- Airline_Customer_Satisfaction_Analysis_Documentation
+- Airline_Customer_Satisfaction_Analysis- Project Report Documentation
+- Data/ – Dataset folder: Created to organise and store the project dataset. Since the original dataset exceeded GitHub's file size
+  limitations, it was added to the repository using Git. Additionally, a compressed ZIP file of the dataset was kept in the repository
+  for convenience.
 
-- data/ – Dataset folder: Created to organise and store the project dataset as instructed. Due to GitHub's file size restrictions, the original dataset could not be uploaded directly into this folder. Therefore, the dataset was compressed into a ZIP file and uploaded separately to the repository.
   
 ## How to Run the Notebook
 
