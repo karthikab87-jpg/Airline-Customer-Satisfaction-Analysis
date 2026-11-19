@@ -31,12 +31,14 @@ This project analyzes airline passenger reviews and ratings to understand custom
 
 ## Tools and Technologies
 
-- Python
-- Jupyter Notebook
-- Pandas
-- Matplotlib
-- Seaborn
-- Plotly
+| Tool / Library | Purpose |
+|---|---|
+| Python | Programming language used for data analysis. |
+| Jupyter Notebook | Environment used to write and run the analysis notebooks. |
+| Pandas | Used for data loading, cleaning, manipulation, and analysis. |
+| Matplotlib | Used to create data visualisations and charts. |
+| Seaborn | Used to create statistical visualisations. |
+| Plotly | Used to create interactive visualisations. |
 
 ## Repository Contents
 
