@@ -58,18 +58,17 @@ This project analyzes airline passenger reviews and ratings to understand custom
 4. Ensure the dataset is available in the data/ folder.
 5. Run the notebook cells from top to bottom.
 
-## Phase 1: Project Planning, SRS and Initial Dataset Exploration
+## Phase 1: Project Planning and Initial Dataset Exploration
 
 - Identified and selected a suitable Skytrax airline review dataset based on the project requirements.
 - Defined the project scope, objectives and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
-- Prepared the Software Requirements Specification (SRS) document.
 - Imported the required Python libraries, including Pandas, NumPy, Matplotlib and Seaborn.
 - Loaded the airline review dataset into a Pandas DataFrame.
 - Performed initial dataset inspection using `head()`, `tail()`, `shape`, `columns`, `info()` and `dtypes`.
 - Examined the first and last records to understand the dataset contents.
 - Checked the dataset dimensions, column names, data types and non-null information to understand its structure before proceeding with
   data cleaning and preprocessing.
-  
+
 ## Phase 2: Data Cleaning and Preprocessing
 
 - Imported and inspected the dataset, identified and handled missing values, removed duplicate records, standardized categorical            values,converted date columns into datetime format, and validated rating ranges. Created two new features: satisfaction_level and         average_service_rating, to support further analysis.
@@ -440,7 +439,16 @@ Customer satisfaction differed across Indian airlines and passenger categories. 
 
 Value for money was the strongest differentiating factor between highly satisfied and poorly satisfied passengers. Improving value for money and other weaker service areas may help airlines improve customer satisfaction.
 
-### 6. Challenges Faced During Analysis
+### 6. Project Documentation
+
+- The project documentation provides a detailed explanation of the project workflow, including the business problem, objectives, dataset
+  information, data preparation, analysis methods, key findings, business recommendations and conclusions.
+  The following documents are included:
+  
+  - **Software Requirements Specification (SRS):** Describes the project requirements, objectives and scope.
+  - **Main Project Report:** Documents the complete project process, from data preparation to analysis, findings and conclusions.
+
+### 7. Challenges Faced During Analysis
 
 The following challenges were encountered while analysing the airline review dataset:
 
@@ -455,7 +463,7 @@ The following challenges were encountered while analysing the airline review dat
 6. Visualisation Challenges: Some charts contained too many categories or overlapping data points. Appropriate chart types, filtering and
    formatting were used to improve readability.
    
-### 7. Suggestions and Recommendations
+### 8. Suggestions and Recommendations
    
 Based on the analysis, the following recommendations can help airlines improve customer experience:
 - Improve Ground Services: Focus on check-in procedures, airport assistance and other ground service experiences.
@@ -466,7 +474,7 @@ Based on the analysis, the following recommendations can help airlines improve c
 - Focus on Passenger Segments: Consider the different expectations of passengers based on traveller type and seat category.
 - Monitor Customer Satisfaction: Regularly analyse customer feedback to identify service weaknesses and track improvements.
   
-### 8. Project Outcomes
+### 9. Project Outcomes
 
 Through this analysis, the following outcomes were achieved:
 
@@ -502,7 +510,7 @@ Focused on Indian airlines to compare customer satisfaction and service quality.
 
 Identified service factors that received comparatively lower ratings, particularly ground service and value for money. The findings highlight areas where airlines may need to focus on improving service quality and passenger experience.
 
-#### Areas for Improvement
+### 10. Areas for Improvement
 
 **Value for Money:** Improve the balance between ticket prices and the quality of services provided.
 
@@ -516,7 +524,7 @@ Identified service factors that received comparatively lower ratings, particular
 
 **Cabin Staff Service:** Maintain good staff behaviour, communication and passenger support.
 
-### 9. Conclusion
+### 11. Conclusion
    
 - This project provided a detailed analysis of airline customer satisfaction and service quality using customer review data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction levels, airline performance and service quality were identified.
 
