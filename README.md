@@ -54,15 +54,17 @@ This project analyzes airline passenger reviews and ratings to understand custom
 4. Ensure the dataset is available in the data/ folder.
 5. Run the notebook cells from top to bottom.
 
-### Phase 1: Project Planning and SRS
+### Phase 1: Project Planning, SRS and Initial Dataset Exploration
 
-- Identified and selected a suitable Skytrax airline review dataset based on the project requirements and given conditions.
-- Defined the project scope, objectives, and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
-- Prepared the Software Requirements Specification (SRS) document and selected the Skytrax airline review dataset for analysis.
-- Imported the required Python libraries, including Pandas, NumPy, Matplotlib and Seaborn, for data analysis and visualisation.
-- Loaded the airline review dataset into the Python environment.
-- Performed initial dataset exploration using head(), tail(), shape, columns, info() and dtypes to understand the dataset structure,
-  dimensions, column names and data types.
+- Identified and selected a suitable Skytrax airline review dataset based on the project requirements.
+- Defined the project scope, objectives and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
+- Prepared the Software Requirements Specification (SRS) document.
+- Imported the required Python libraries, including Pandas, NumPy, Matplotlib and Seaborn.
+- Loaded the airline review dataset into a Pandas DataFrame.
+- Performed initial dataset inspection using `head()`, `tail()`, `shape`, `columns`, `info()` and `dtypes`.
+- Examined the first and last records to understand the dataset contents.
+- Checked the dataset dimensions, column names, data types and non-null information to understand its structure before proceeding with
+  data cleaning and preprocessing.
   
 ### Phase 2: Data Cleaning and Preprocessing
 
@@ -449,7 +451,7 @@ The following challenges were encountered while analysing the airline review dat
 6. Visualisation Challenges: Some charts contained too many categories or overlapping data points. Appropriate chart types, filtering and
    formatting were used to improve readability.
    
-**7. Suggestions and Recommendations**
+### 7. Suggestions and Recommendations
    
 Based on the analysis, the following recommendations can help airlines improve customer experience:
 - Improve Ground Services: Focus on check-in procedures, airport assistance and other ground service experiences.
@@ -460,7 +462,7 @@ Based on the analysis, the following recommendations can help airlines improve c
 - Focus on Passenger Segments: Consider the different expectations of passengers based on traveller type and seat category.
 - Monitor Customer Satisfaction: Regularly analyse customer feedback to identify service weaknesses and track improvements.
   
-**8. Project Outcomes**
+### 8. Project Outcomes
 
 Through this analysis, the following outcomes were achieved:
 
@@ -510,7 +512,7 @@ Identified service factors that received comparatively lower ratings, particular
 
 **Cabin Staff Service:** Maintain good staff behaviour, communication and passenger support.
 
-**9. Conclusion**
+### 9. Conclusion
    
 - This project provided a detailed analysis of airline customer satisfaction and service quality using customer review data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction levels, airline performance and service quality were identified.
 
