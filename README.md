@@ -243,13 +243,13 @@ The analysis was conducted using Python libraries such as Pandas, Matplotlib, Se
   
 ##### 3. Categorical Data – describe()
    
-- Used the describe(include='object') function to summarise categorical columns. It provides the count, number of unique values, most
+- Used the describe(include='str') function to summarise categorical columns. It provides the count, number of unique values, most
   frequent value and its frequency.
 
 ##### Important difference:
 
 - df.describe() – summarises numerical columns by default.
-- df.describe(include='object') – summarises categorical columns.
+- df.describe(include='str') – summarises categorical columns.
 - df.describe(include='all') – provides summaries for both types.
   
 ### 4. EDA Methodology
@@ -468,35 +468,35 @@ Based on the analysis, the following recommendations can help airlines improve c
 
 Through this analysis, the following outcomes were achieved:
 
-### 1. Understanding Overall Customer Ratings and Satisfaction Patterns
+#### 1. Understanding Overall Customer Ratings and Satisfaction Patterns
 
 Analysed overall customer ratings and satisfaction levels across airline reviews to understand passenger experiences. Identified the distribution of Poor, Medium and High satisfaction levels and observed that Poor satisfaction accounted for the largest proportion of reviews.
 
-### 2. Evaluation of Global Airline Performance
+#### 2. Evaluation of Global Airline Performance
 
 Compared the average overall ratings of different airlines to identify the highest- and lowest-rated airlines. Hainan Airlines recorded the highest average rating of 8.49, while Silver Airways recorded the lowest average rating of 1.82 among airlines with at least 100 reviews.
 
-### 3. Detailed Analysis of Hainan Airlines
+#### 3. Detailed Analysis of Hainan Airlines
 
 Selected Hainan Airlines for further analysis based on its highest average overall rating. Examined passenger ratings based on trip verification and recommendation status. The analysis showed that passengers who recommended the airline generally gave higher average ratings than those who did not recommend it.
 
-### 4. Comparison of Service Quality Ratings
+#### 4. Comparison of Service Quality Ratings
 
 Compared six service quality factors between highly satisfied and poorly satisfied passengers. Identified differences in ratings across seat comfort, cabin staff service, food and beverages, inflight entertainment, ground service and value for money. Value for money showed one of the largest differences between the two satisfaction groups.
 
-### 5. Correlation Analysis of Service Quality Factors
+#### 5. Correlation Analysis of Service Quality Factors
 
 Examined the relationships among the six service quality factors using correlation analysis. Identified positive correlations between all service factors, with ground service and value for money showing the strongest correlation. This helped understand how different service factors are related to one another.
 
-### 6. Analysis of Traveller Types and Seat Categories
+#### 6. Analysis of Traveller Types and Seat Categories
 
 Evaluated customer ratings across different traveller types and seat categories. Identified variations in average ratings among Solo Leisure, Couple Leisure, Family Leisure and Business travellers. Also examined how passenger satisfaction varied across different seat categories.
 
-### 7. Indian Airline Performance and Service Quality Analysis
+#### 7. Indian Airline Performance and Service Quality Analysis
 
 Focused on Indian airlines to compare customer satisfaction and service quality. Examined satisfaction patterns across airlines, traveller types and seat categories. Also compared service ratings between highly satisfied and poorly satisfied passengers to identify stronger and weaker service areas.
 
-### 8. Identification of Service Areas for Improvement
+#### 8. Identification of Service Areas for Improvement
 
 Identified service factors that received comparatively lower ratings, particularly ground service and value for money. The findings highlight areas where airlines may need to focus on improving service quality and passenger experience.
 
