@@ -526,15 +526,14 @@ Identified service factors that received comparatively lower ratings, particular
 
 ### 11. Conclusion
    
-- This project provided a detailed analysis of airline customer satisfaction and service quality using passenger ratings and
+  This project provided a detailed analysis of airline customer satisfaction and service quality using passenger ratings and
   recommendation data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction
   levels, airline performance and service quality were identified.
   
-- The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value
-  for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat
+  The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value    for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat 
   categories and Indian airlines.
   
-- Overall, the project demonstrates how data analysis can help understand passenger satisfaction, identify service weaknesses and support   data-driven decisions. The findings can help airlines identify areas for improvement, enhance passenger experiences and improve service   quality.
+  Overall, the project demonstrates how data analysis can help understand passenger satisfaction, identify service weaknesses and support   data-driven decisions. The findings can help airlines identify areas for improvement, enhance passenger experiences and improve service   quality.
 
 
 
