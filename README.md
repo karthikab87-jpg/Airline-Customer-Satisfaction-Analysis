@@ -64,7 +64,7 @@ This project analyzes airline passenger reviews and ratings to understand custom
 - Defined the project scope, objectives and requirements for the Airline Customer Satisfaction & Service Quality Analysis project.
 - Imported the required Python libraries, including Pandas, NumPy, Matplotlib and Seaborn.
 - Loaded the airline review dataset into a Pandas DataFrame.
-- Performed initial dataset inspection using `head()`, `tail()`, `shape`, `columns`, `info()` and `dtypes`.
+- Performed initial dataset inspection using head(), tail(), shape, columns, info() and dtypes.
 - Examined the first and last records to understand the dataset contents.
 - Checked the dataset dimensions, column names, data types and non-null information to understand its structure before proceeding with
   data cleaning and preprocessing.
@@ -526,11 +526,15 @@ Identified service factors that received comparatively lower ratings, particular
 
 ### 11. Conclusion
    
-- This project provided a detailed analysis of airline customer satisfaction and service quality using customer review data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction levels, airline performance and service quality were identified.
-
-- The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat categories and Indian airlines.The analysis also revealed that highly satisfied passengers gave higher ratings across all six service factors compared with poorly satisfied passengers.
-
-- Overall, the project demonstrates how data analysis can help understand customer feedback, identify service weaknesses and support data-driven decisions to improve airline service quality and passenger satisfaction. Airlines can use these findings to identify weak service areas, improve passenger experience and make better data-driven decisions.
+- This project provided a detailed analysis of airline customer satisfaction and service quality using passenger ratings and
+  recommendation data. Through univariate, bivariate and multivariate analysis, different patterns in customer ratings, satisfaction
+  levels, airline performance and service quality were identified.
+  
+- The analysis highlighted Hainan Airlines as the highest-rated airline in the global comparison and identified ground service and value
+  for money as important areas requiring improvement. It also revealed differences in customer experiences across traveller types, seat
+  categories and Indian airlines.
+  
+- Overall, the project demonstrates how data analysis can help understand passenger satisfaction, identify service weaknesses and support   data-driven decisions. The findings can help airlines identify areas for improvement, enhance passenger experiences and improve service   quality.
 
 
 
